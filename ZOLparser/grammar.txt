@@ -1,0 +1,5 @@
+expression	-> wedge ( ( "->" | "<->" ) wedge)*
+wedge		-> unary ( ( "^" | "v" ) unary)*;
+unary		-> "~" unary | primary;
+primary		-> atom | "(" expression ")" ;
+atom		-> [pqrs] ;
